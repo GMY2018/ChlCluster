@@ -1,5 +1,4 @@
 # ChlCluster
-Clustering of the smoothed chlorophyll-a monthly time series data for over 500 lakes.
 
 By Mengyi
 
