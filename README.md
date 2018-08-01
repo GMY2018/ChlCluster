@@ -3,4 +3,4 @@ Visualizing the results of functional clustering of the chlorophyll-a data
 
 By Mengyi
 
-Type in runGitHub(repo='ChlCluster', username='GMY2018') in R to see the app
+For this app, you will need to install R packages 'shiny', 'rworldmap', 'DT' and their dependencies if required. Then type runGitHub(repo='ChlCluster', username='GMY2018') in R to run the app.
