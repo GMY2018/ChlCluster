@@ -1,5 +1,5 @@
 # ChlCluster
-Visualizing the results of functional clustering of the chlorophyll-a data
+Clustering of the smoothed chlorophyll-a monthly time series data for over 500 lakes.
 
 By Mengyi
 
