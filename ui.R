@@ -56,7 +56,7 @@ fluidPage( # padding = c(0, 10), # pad left and right only
     conditionalPanel(
       condition = "input.Pick == 'Seasonality'",
       # em('Clustering 531 lakes.', style = 'color:gray'),
-      selectInput('KM.season', p('Select luster numbers', style = 'color:gray'),
+      selectInput('KM.season', p('Select cluster numbers', style = 'color:gray'),
                   choices = list('8 clusters', '9 clusters', '10 clusters'), 
                   selected = NULL, width='70%')
     ),
