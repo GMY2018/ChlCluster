@@ -9,7 +9,8 @@ label535 <- paste(ID535, name535)
 
 fluidPage( # padding = c(0, 10), # pad left and right only
   
-  titlePanel(p('Cluster the smoothed chlorophyll curves', style = 'color:steelblue')),
+  titlePanel(p('Cluster the smoothed chlorophyll curves', style = 'color:steelblue'),
+             windowTitle="Clustering the chlorophyll time series"),
   # font-family:georgia
   strong('This app explores the clustering of the log(chlorophyll) data in three different ways, using
          (i) the original smoothed curves, (ii) the smoothed trend, (iii) the smoothed seasonality. Select
