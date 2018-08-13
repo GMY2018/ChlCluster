@@ -198,7 +198,7 @@ fluidPage( # padding = c(0, 10), # pad left and right only
                     ),
                
                
-               conditionalPanel(condition = "input.Pick == 'Seasonality'",
+               conditionalPanel(condition = "input.Pick == 'Trend'",
                        fluidRow(
                           column(8,
                           br(),
@@ -213,14 +213,14 @@ fluidPage( # padding = c(0, 10), # pad left and right only
                           br(),
                           p('-- The basic infos of lakes in the cluster.', style = 'color:dimgray'),
                           br(),
-                          div(DT::dataTableOutput(outputId = 'Lakelist3'), 
+                          div(DT::dataTableOutput(outputId = 'Lakelist2'), 
                           style = 'font-size:85%; width:90%; overflow:scroll'),
                           br())
                       )
                ),
                
                
-               conditionalPanel(condition = "input.Pick == 'Trend'",
+               conditionalPanel(condition = "input.Pick == 'Seasonality'",
                         fluidRow(
                             column(8,
                             br(),
@@ -235,7 +235,7 @@ fluidPage( # padding = c(0, 10), # pad left and right only
                             br(),
                             p('-- The basic infos of lakes in the cluster.', style = 'color:dimgray'),
                             br(),
-                            div(DT::dataTableOutput(outputId = 'Lakelist2'), 
+                            div(DT::dataTableOutput(outputId = 'Lakelist3'), 
                                 style = 'font-size:85%; width:90%; overflow:scroll'),
                             br())
                       )
