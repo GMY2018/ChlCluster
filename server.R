@@ -260,6 +260,12 @@ function(input, output, session) {
            xlab=paste('Map of cluster', gr), ylab='', main='', axes=FALSE)
       plot(coastsCoarse, add=T, col='gray40')
     } 
+    else {
+      par(mar=c(1.5, 1.5, 5, 1.5), bg=NA, col.main='gray50')
+      plot(0, 1, type="n", xlab="", ylab="", xaxt="n", yaxt="n", bty="n",  
+           main=paste('Sorry, but there are only', k, 'clusters!'))
+    }
+    
   })
   
   
@@ -290,10 +296,10 @@ function(input, output, session) {
            xlab=paste('Map of cluster', gr), ylab='', main='', axes=FALSE)
       plot(coastsCoarse, add=T, col='gray40')
     } 
-    else {
-      par(mar=c(1.5, 1.5, 5, 1.5), bg=NA)
-      plot(0, 1, xlab="", ylab="", xaxt="n", yaxt="n", bty="n",  # type="n", 
-           main=paste('Sorry, but there are only', gr, 'clusters!'))
+   else {
+      par(mar=c(1.5, 1.5, 5, 1.5), bg=NA, col.main='gray50')
+      plot(0, 1, type="n", xlab="", ylab="", xaxt="n", yaxt="n", bty="n",  
+           main=paste('Sorry, but there are only', k, 'clusters!'))
     }
     
   })
@@ -326,6 +332,12 @@ function(input, output, session) {
            xlab=paste('Map of cluster', gr), ylab='', main='', axes=FALSE)
       plot(coastsCoarse, add=T, col='gray40')
     } 
+    else {
+      par(mar=c(1.5, 1.5, 5, 1.5), bg=NA, col.main='gray50')
+      plot(0, 1, type="n", xlab="", ylab="", xaxt="n", yaxt="n", bty="n", 
+           main=paste('Sorry, but there are only', k, 'clusters!'))
+    }
+    
   })
   
   
