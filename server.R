@@ -38,9 +38,10 @@ Colours <- c('royalblue4', 'dodgerblue2', 'lightseagreen', 'forestgreen',
 ##################################################################################################
 
 
+# The server function
 function(input, output, session) {
   
-  dataInput <- reactive({  # eventReactive(input$Go, {
+  dataInput <- reactive({
     Data <- switch(input$Pick,
                    'Original' = ClusterChl, 'Trend' = ClusterTrend, 'Seasonality' = ClusterSeason)
     return(Data)
