@@ -41,39 +41,35 @@ Colours <- c('royalblue4', 'dodgerblue2', 'lightseagreen', 'forestgreen',
 # The server function
 function(input, output, session) {
   
-  dataInput <- reactive({
-    Data <- switch(input$Pick,
-                   'Original' = ClusterChl, 'Trend' = ClusterTrend, 'Seasonality' = ClusterSeason)
-    return(Data)
-  })
-  
-  clusterInput1 <- reactive({
-    KM <- switch(input$KM.original, 
-                 '11 clusters' = dataInput()[[1]], '12 clusters' = dataInput()[[2]],  
-                 '13 clusters' = dataInput()[[3]], '14 clusters' = dataInput()[[4]])
-    return(KM)
-  })
-  
-  clusterInput2 <- reactive({
-    KM <- switch(input$KM.trend, 
-                 '4 clusters' = dataInput()[[1]], '8 clusters' = dataInput()[[2]],  
-                 '11 clusters' = dataInput()[[3]], '13 clusters' = dataInput()[[4]])
-    return(KM)
-  })
-  
-  clusterInput3 <- reactive({
-    KM <- switch(input$KM.season, 
-                 '8 clusters' = dataInput()[[1]], '9 clusters' = dataInput()[[2]],  
-                 '10 clusters' = dataInput()[[3]])
-    return(KM)
-  })
-  
   attrInput <- reactive({
     Attr <- switch(input$Pick,
                    'Original' = Chl529, 'Trend' = Trend531, 'Seasonality' = Season531)
     return(Attr)  
   })
   
+  clusterInput1 <- reactive({
+    dataList <- ClusterChl
+    KM <- switch(input$KM.original,   # this is the triger event
+                '11 clusters' = dataList[[1]], '12 clusters' = dataList[[2]],  
+                '13 clusters' = dataList[[3]], '14 clusters' = dataList[[4]])
+    return(KM)
+  })
+  
+  clusterInput2 <- reactive({
+    dataList <- ClusterTrend
+    KM <- switch(input$KM.trend, 
+                '4 clusters' = dataList[[1]], '8 clusters' = dataList[[2]],  
+                '11 clusters' = dataList[[3]], '13 clusters' = dataList[[4]])
+    return(KM)
+  })
+  
+  clusterInput3 <- reactive({
+    dataList <- ClusterSeason
+    KM <- switch(input$KM.season, 
+                '8 clusters' = dataList[[1]], '9 clusters' = dataList[[2]],  
+                '10 clusters' = dataList[[3]])
+    return(KM)
+  }) 
   
   
   ## -------------------------------
